@@ -4,7 +4,10 @@ import axios from 'axios';
 // Use Vite env variables via `import.meta.env`. Vite exposes variables
 // that start with `VITE_` (e.g. `VITE_API_URL`). `process` is undefined
 // in the browser when using Vite, which caused the ReferenceError.
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001/api';
+
+const API_BASE_URL = process.env.VITE_API_URL;
+
+// || 'http://localhost:5001/api'
 
 const api = axios.create({
   baseURL: API_BASE_URL,

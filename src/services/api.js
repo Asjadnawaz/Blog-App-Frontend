@@ -5,7 +5,7 @@ import axios from 'axios';
 // that start with `VITE_` (e.g. `VITE_API_URL`). `process` is undefined
 // in the browser when using Vite, which caused the ReferenceError.
 
-const API_BASE_URL = "https://blog-app-backend-production-afc5.up.railway.app/api";
+const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 // || 'http://localhost:5001/api'
 
